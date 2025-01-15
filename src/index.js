@@ -2,9 +2,10 @@
 
 import express from "express";
 import  connectDB  from "./db/index.js";
+import {app} from "./app.js"
 
 
-const app = express()
+// const app = express()
 connectDB()
 .then(
     () => {
@@ -18,5 +19,11 @@ connectDB()
     console.log(`Mongo DB Connection Faild: ${err} `)
 })
 
+// JUST FOR TESTING PERPOSES
+// app.post('/api/resource', (req, res) => {
+//     res.send('Route works!');
+// });
 
 
+
+ 
